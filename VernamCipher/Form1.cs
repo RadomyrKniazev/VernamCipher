@@ -16,14 +16,17 @@ namespace VernamCipher
         public Form1()
         {
             InitializeComponent();
+            if(File.Exists("encrypt.txt") == false)
             using (myStream = File.Create("encrypt.txt"))
             {
                 myStream.Close();
             }
+            if (File.Exists("decrypt.txt") == false)
             using (myStream = File.Create("decrypt.txt"))
             {
                 myStream.Close();
             }
+            if (File.Exists("key.txt") == false)
             using (myStream = File.Create("key.txt"))
             {
                 myStream.Close();
